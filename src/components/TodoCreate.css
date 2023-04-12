@@ -1,0 +1,26 @@
+form {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0px 0px 50px;
+}
+
+input {
+    padding: 20px;
+    font-size: 14px;
+    background-color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    border-radius: 4px;
+}
+
+input::placeholder {
+    font-weight: bolder;
+    color: var(--color-fg);
+}
+
+input[type=text]:focus {
+    border: 2px solid var(--color-fg);
+    outline: none;
+    box-shadow: none;
+}
