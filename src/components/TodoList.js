@@ -16,7 +16,7 @@ const todos = [
   {
     title: "Terminar el curso de expresiones regulares",
     created: "2023-04-12",
-    completed: false
+    completed: true
   }
 ];
 
@@ -27,7 +27,12 @@ function TodoList ()
             <ul>
                 {/* Crea un item por cada todo creado */}
                 {todos.map(todo => (
-                    <TodoItem key={todo.title} title={todo.title} created={todo.created}/>
+                    <TodoItem
+                      key={todo.title}
+                      title={todo.title}
+                      created={todo.created}
+                      completed={todo.completed}
+                    />
                 ))}
             </ul>
         </section>

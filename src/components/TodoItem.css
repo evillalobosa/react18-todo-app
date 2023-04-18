@@ -1,17 +1,47 @@
 li {
-    font-weight: bold;
-    font-size: 16px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin: 15px 0px 15px;
     padding: 0px 15px 10px;
+    background-color: var(--color-bg);
     border: 2px solid var(--color-accent);
     border-radius: 4px;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 }
 
-.todoitem-details {
-    font-weight: lighter;
-    font-size: 14px;
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    height: 1.5em;
+}
+
+.task-icon {
+    margin-right: 10px;
+}
+
+.task-details {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 16px;
+    width: 90%;
+}
+
+.task-properties {
     display: flex;
     justify-content: space-between;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.task-completed {
+    opacity: 0.3;
+    text-decoration: line-through
 }

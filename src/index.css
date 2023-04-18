@@ -1,5 +1,5 @@
 :root {
-    --color-bg: #fefae0;
+    --color-bg: #FFF;
     --color-fg: #2b2d42;
     --color-accent: #2a9d8f;
 }
@@ -9,8 +9,9 @@ body {
   font-family: 'Ubuntu', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-bg);
   color: var(--color-fg);
+  background-image: url('https://wallpaperaccess.com/full/5264077.jpg');
+  background-size: cover;
 }
 
 code {

@@ -7,9 +7,10 @@ import './App.css';
 function App() {
   return (
     <React.Fragment>
-        <h1>To-Do App</h1>
-
-        <TodoCounter ClassName="TodoCounter"/>
+        <div className='header'>
+          <h1>To-Do App</h1>
+          <TodoCounter ClassName="TodoCounter"/>
+        </div>
 
         <TodoList/>
 
