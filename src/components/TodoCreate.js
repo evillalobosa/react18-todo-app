@@ -1,9 +1,9 @@
 import React from "react";
 import "./TodoCreate.css";
 
-function TodoCreate() {
+function TodoCreate({ searchValue, setSearchValue }) {
   const onTyping = (event) => {
-    console.log(event.target.value);
+    setSearchValue(event.target.value);
   };
 
   // TODO: add a button to clear the input 🗑️
@@ -12,6 +12,7 @@ function TodoCreate() {
       <input
         type="text"
         placeholder="Create new tasks here!"
+        value={searchValue}
         onChange={onTyping}
       />
     </form>
