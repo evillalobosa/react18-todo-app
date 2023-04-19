@@ -51,6 +51,25 @@ function App() {
     });
   }
 
+  // Function to mark todo's as completed
+  const completeTodo = (text) => {
+    const todoIndex = todos.findIndex((todo) => todo.text === text);
+
+    const updatedTodos = [...todos];
+    updatedTodos[todoIndex].completed = true;
+
+    setTodos(updatedTodos);
+  };
+
+  const deleteTodo = (text) => {
+    const todoIndex = todos.findIndex((todo) => todo.text === text);
+
+    const updatedTodos = [...todos];
+    updatedTodos.splice(todoIndex, 1);
+
+    setTodos(updatedTodos);
+  };
+
   return (
     <React.Fragment>
       {/* TODO: Convert to a header component */}
@@ -63,7 +82,12 @@ function App() {
         />
       </div>
 
-      <TodoList todos={searchedTodos} setTodos={setTodos} />
+      <TodoList
+        todos={searchedTodos}
+        setTodos={setTodos}
+        onComplete={completeTodo}
+        onDelete={deleteTodo}
+      />
 
       <TodoCreate searchValue={searchValue} setSearchValue={setSearchValue} />
     </React.Fragment>

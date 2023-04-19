@@ -2,7 +2,7 @@ import React from "react";
 import { TodoItem } from "./TodoItem";
 import "./TodoList.css";
 
-function TodoList({ todos, setTodos }) {
+function TodoList({ todos, setTodos, onComplete, onDelete }) {
   return (
     <section>
       <ul>
@@ -15,6 +15,8 @@ function TodoList({ todos, setTodos }) {
               title={todo.title}
               created={todo.created}
               completed={todo.completed}
+              onComplete={() => onComplete(todo.text)}
+              onDelete={() => onDelete(todo.text)}
             />
           ))}
 
@@ -27,6 +29,8 @@ function TodoList({ todos, setTodos }) {
               title={todo.title}
               created={todo.created}
               completed={todo.completed}
+              onComplete={() => onComplete(todo.text)}
+              onDelete={() => onDelete(todo.text)}
             />
           ))}
       </ul>
