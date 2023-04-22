@@ -53,16 +53,16 @@ function App() {
 
   // Function to mark todo's as completed
   const completeTodo = (text) => {
-    const todoIndex = todos.findIndex((todo) => todo.text === text);
+    const todoIndex = todos.findIndex((todo) => todo.title === text);
 
     const updatedTodos = [...todos];
-    updatedTodos[todoIndex].completed = true;
+    updatedTodos[todoIndex].completed = !updatedTodos[todoIndex].completed;
 
     setTodos(updatedTodos);
   };
 
   const deleteTodo = (text) => {
-    const todoIndex = todos.findIndex((todo) => todo.text === text);
+    const todoIndex = todos.findIndex((todo) => todo.title === text);
 
     const updatedTodos = [...todos];
     updatedTodos.splice(todoIndex, 1);

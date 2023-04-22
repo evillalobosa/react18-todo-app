@@ -15,8 +15,8 @@ function TodoList({ todos, setTodos, onComplete, onDelete }) {
               title={todo.title}
               created={todo.created}
               completed={todo.completed}
-              onComplete={() => onComplete(todo.text)}
-              onDelete={() => onDelete(todo.text)}
+              onComplete={() => onComplete(todo.title)}
+              onDelete={() => onDelete(todo.title)}
             />
           ))}
 
@@ -29,8 +29,8 @@ function TodoList({ todos, setTodos, onComplete, onDelete }) {
               title={todo.title}
               created={todo.created}
               completed={todo.completed}
-              onComplete={() => onComplete(todo.text)}
-              onDelete={() => onDelete(todo.text)}
+              onComplete={() => onComplete(todo.title)}
+              onDelete={() => onDelete(todo.title)}
             />
           ))}
       </ul>
