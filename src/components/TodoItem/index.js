@@ -1,5 +1,5 @@
 import React from "react";
-import "./TodoItem.css";
+import "./index.css";
 import { MdTaskAlt, MdRadioButtonUnchecked, MdClose } from "react-icons/md";
 
 function TodoItem(props) {

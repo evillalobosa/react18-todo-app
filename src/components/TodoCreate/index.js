@@ -1,5 +1,5 @@
 import React from "react";
-import "./TodoCreate.css";
+import "./index.css";
 
 function TodoCreate({ searchValue, setSearchValue }) {
   const onTyping = (event) => {
