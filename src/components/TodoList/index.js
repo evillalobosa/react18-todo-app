@@ -5,6 +5,12 @@ import "./index.css";
 function TodoList({ todos, setTodos, onComplete, onDelete }) {
   return (
     <section>
+      {error && <p className="error">Error!</p>}
+      {loading && <p className="loading">Cargando..</p>}
+      {!loading && !searchedTodos.length && (
+        <p className="emptyTasks">No hay tareas</p>
+      )}
+
       <ul>
         {/* MUESTRA LOS NO COMPLETADOS */}
         {todos
