@@ -1,8 +1,12 @@
 import React from "react";
+import { TodoContext } from "../TodoContext";
 import { TodoItem } from "../TodoItem";
 import "./index.css";
 
-function TodoList({ todos, setTodos, onComplete, onDelete }) {
+function TodoList() {
+  const { error, loading, searchedTodos, completeTodo, deleteTodo } =
+    React.useContext(TodoContext);
+
   return (
     <section>
       {error && <p className="error">Error!</p>}
@@ -13,7 +17,7 @@ function TodoList({ todos, setTodos, onComplete, onDelete }) {
 
       <ul>
         {/* MUESTRA LOS NO COMPLETADOS */}
-        {todos
+        {searchedTodos
           .filter((todo) => todo.completed === false)
           .map((todo) => (
             <TodoItem
@@ -21,13 +25,13 @@ function TodoList({ todos, setTodos, onComplete, onDelete }) {
               title={todo.title}
               created={todo.created}
               completed={todo.completed}
-              onComplete={() => onComplete(todo.title)}
-              onDelete={() => onDelete(todo.title)}
+              onComplete={() => completeTodo(todo.title)}
+              onDelete={() => deleteTodo(todo.title)}
             />
           ))}
 
         {/* MUESTRA LOS COMPLETADOS */}
-        {todos
+        {searchedTodos
           .filter((todo) => todo.completed === true)
           .map((todo) => (
             <TodoItem
@@ -35,8 +39,8 @@ function TodoList({ todos, setTodos, onComplete, onDelete }) {
               title={todo.title}
               created={todo.created}
               completed={todo.completed}
-              onComplete={() => onComplete(todo.title)}
-              onDelete={() => onDelete(todo.title)}
+              onComplete={() => completeTodo(todo.title)}
+              onDelete={() => deleteTodo(todo.title)}
             />
           ))}
       </ul>

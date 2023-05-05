@@ -11,3 +11,10 @@ ul {
   margin: 0;
   list-style: none;
 }
+
+.emptyTasks {
+    background-color: var(--color-bg);
+    padding: 10px 50px;
+    margin: 20px 0px 10px;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+}

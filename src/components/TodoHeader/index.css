@@ -6,7 +6,17 @@ h1 {
     margin: 15px 0px 0px;
 }
 
-.header, .emptyTasks {
+.TodoCounter {
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 10px 0px 20px;
+    border-radius: 8px;
+    color: var(--color-fg);
+}
+
+/* TODO: Refactor */
+.header {
     background-color: var(--color-bg);
     padding: 10px 50px;
     margin: 20px 0px 10px;

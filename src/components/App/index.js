@@ -1,9 +1,8 @@
 import React from "react";
 import { TodoProvider } from "../TodoContext";
-import { TodoCounter } from "../TodoCounter";
+import { TodoHeader } from "../TodoHeader";
 import { TodoCreate } from "../TodoCreate";
 import { TodoList } from "../TodoList";
-import "./index.css";
 
 // const defaultTodos = [
 //   {
@@ -18,18 +17,11 @@ import "./index.css";
 //   },
 // ];
 
-// MAIN
 function App() {
   return (
     <TodoProvider>
-      {/* TODO: Convert to a header component */}
-      <div className="header">
-        <h1>To-Do App</h1>
-        <TodoCounter ClassName="TodoCounter" />
-      </div>
-
+      <TodoHeader />
       <TodoList />
-
       <TodoCreate />
     </TodoProvider>
   );
