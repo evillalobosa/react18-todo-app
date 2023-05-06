@@ -27,6 +27,19 @@ function TodoProvider(props) {
     });
   }
 
+  // Function to create a new to-do
+  const addTodo = (text) => {
+    const updatedTodos = [...todos];
+    // TODO: fix date
+    updatedTodos.push({
+      title: text,
+      completed: false,
+      created: "2023-05-05",
+    });
+
+    saveTodos(updatedTodos);
+  };
+
   // Function to mark todo's as completed
   const completeTodo = (text) => {
     const todoIndex = todos.findIndex((todo) => todo.title === text);
@@ -57,6 +70,7 @@ function TodoProvider(props) {
         searchValue,
         setSearchValue,
         searchedTodos,
+        addTodo,
         completeTodo,
         deleteTodo,
       }}
