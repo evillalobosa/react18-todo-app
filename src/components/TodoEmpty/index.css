@@ -1,0 +1,6 @@
+.empty {
+    background-color: var(--color-bg);
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+}

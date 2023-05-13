@@ -2,6 +2,9 @@ import React from "react";
 import { TodoContext } from "../TodoContext";
 import { TodoItem } from "../TodoItem";
 import "./index.css";
+import { TodoError } from "../TodoError";
+import { TodoLoading } from "../TodoLoading";
+import { TodoEmpty } from "../TodoEmpty";
 
 function TodoList() {
   const { error, loading, searchedTodos, completeTodo, deleteTodo } =
@@ -9,11 +12,9 @@ function TodoList() {
 
   return (
     <section>
-      {error && <p className="error">Error!</p>}
-      {loading && <p className="loading">Cargando..</p>}
-      {!loading && !searchedTodos.length && (
-        <p className="emptyTasks">No hay tareas</p>
-      )}
+      {error && <TodoError error={error} />}
+      {loading && <TodoLoading />}
+      {!loading && !searchedTodos.length && <TodoEmpty />}
 
       <ul>
         {/* MUESTRA LOS NO COMPLETADOS */}
