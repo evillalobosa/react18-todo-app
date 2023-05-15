@@ -18,6 +18,7 @@ function TodoList() {
 
       <ul>
         {/* MUESTRA LOS NO COMPLETADOS */}
+        {/* TODO: order by priority */}
         {searchedTodos
           .filter((todo) => todo.completed === false)
           .map((todo) => (
@@ -26,6 +27,8 @@ function TodoList() {
               title={todo.title}
               created={todo.created}
               completed={todo.completed}
+              priority={todo.priority}
+              tag={todo.tag}
               onComplete={() => completeTodo(todo.title)}
               onDelete={() => deleteTodo(todo.title)}
             />

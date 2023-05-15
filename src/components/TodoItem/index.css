@@ -6,10 +6,24 @@ li {
     margin: 15px 0px 15px;
     padding: 0px 15px 10px;
     background-color: var(--color-bg);
-    border: 2px solid var(--color-accent);
     border-radius: 4px;
     box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 }
+li.task-priority-p1 {
+    border: 2px solid var(--color-priority1);
+  }
+  
+  li.task-priority-p2 {
+    border: 2px solid var(--color-priority2);
+  }
+  
+  li.task-priority-p3 {
+    border: 2px solid var(--color-priority3);
+  }
+  
+  li.task-priority-p4 {
+    border: 2px solid var(--color-priority4);
+  }
 
 button {
 	background: none;

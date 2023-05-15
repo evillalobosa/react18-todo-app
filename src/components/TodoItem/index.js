@@ -4,7 +4,7 @@ import { MdTaskAlt, MdRadioButtonUnchecked, MdClose } from "react-icons/md";
 
 function TodoItem(props) {
   return (
-    <li>
+    <li className={`task-priority-${props.priority}`}>
       <button type="button" onClick={props.onComplete} className="task-icon">
         {props.completed ? (
           <MdTaskAlt color="green" size="1.5em" />
@@ -18,7 +18,8 @@ function TodoItem(props) {
         </div>
         <div className="task-properties">
           <div>
-            {props.completed ? <div>Completado</div> : <div>Pendiente</div>}{" "}
+            {/* {props.completed ? <div>Completado</div> : <div>Pendiente</div>}{" "} */}
+            {props.tag}
           </div>
           <div>{props.created}</div>
         </div>

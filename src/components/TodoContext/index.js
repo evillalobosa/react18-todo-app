@@ -3,6 +3,15 @@ import { useLocalStorage } from "./useLocalStorage";
 
 const TodoContext = React.createContext();
 
+function currentDate() {
+  const date = new Date();
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  var day = date.getDate();
+
+  return year + "-" + month + "-" + day + " ";
+}
+
 function TodoProvider(props) {
   const {
     item: todos,
@@ -28,13 +37,16 @@ function TodoProvider(props) {
   }
 
   // Function to create a new to-do
-  const addTodo = (text) => {
+  const addTodo = (text, priority, tag) => {
+    const title = text.replace(priority, "").replace(tag, "");
+
     const updatedTodos = [...todos];
-    // TODO: fix date
     updatedTodos.push({
-      title: text,
+      title: title,
       completed: false,
-      created: "2023-05-05",
+      created: currentDate(),
+      priority: priority,
+      tag: tag,
     });
 
     saveTodos(updatedTodos);

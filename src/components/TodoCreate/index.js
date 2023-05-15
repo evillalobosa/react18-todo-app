@@ -5,16 +5,18 @@ import "./index.css";
 function TodoCreate() {
   const { searchValue, setSearchValue, addTodo } =
     React.useContext(TodoContext);
-  const [priority, setPriority] = React.useState("");
+  const [priority, setPriority] = React.useState("p4");
   const [tag, setTag] = React.useState("");
 
   const onSubmit = (event) => {
     // Prevent page reload
     event.preventDefault();
     // Add todo to the list
-    addTodo(searchValue);
+    addTodo(searchValue, priority, tag);
     // Clear the user input
     setSearchValue("");
+    setPriority("p4");
+    setTag("");
   };
 
   const onTyping = (event) => {
