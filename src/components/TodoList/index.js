@@ -10,6 +10,17 @@ function TodoList() {
   const { error, loading, searchedTodos, completeTodo, deleteTodo } =
     React.useContext(TodoContext);
 
+  const priorityOrder = {
+    p1: 1,
+    p2: 2,
+    p3: 3,
+    p4: 4,
+  };
+
+  searchedTodos.sort(
+    (a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]
+  );
+
   return (
     <section>
       {error && <TodoError error={error} />}
@@ -18,7 +29,6 @@ function TodoList() {
 
       <ul>
         {/* MUESTRA LOS NO COMPLETADOS */}
-        {/* TODO: order by priority */}
         {searchedTodos
           .filter((todo) => todo.completed === false)
           .map((todo) => (

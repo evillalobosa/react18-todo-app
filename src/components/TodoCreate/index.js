@@ -31,7 +31,7 @@ function TodoCreate() {
 
     if (matchPriority) {
       console.log("Aplicando prioridad: ", matchPriority[0]);
-      setPriority(matchPriority[0]);
+      setPriority(matchPriority[0].trim());
     }
 
     // MATCH TAG
@@ -42,7 +42,7 @@ function TodoCreate() {
 
     if (matchTag) {
       console.log("Aplicando tag: ", matchTag[0]);
-      setTag(matchTag[0]);
+      setTag(matchTag[0].trim());
     }
   };
 

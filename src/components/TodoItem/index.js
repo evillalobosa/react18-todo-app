@@ -17,10 +17,7 @@ function TodoItem(props) {
           <p>{props.title}</p>
         </div>
         <div className="task-properties">
-          <div>
-            {/* {props.completed ? <div>Completado</div> : <div>Pendiente</div>}{" "} */}
-            {props.tag}
-          </div>
+          <div className="task-tag">{props.tag}</div>
           <div>{props.created}</div>
         </div>
       </div>
