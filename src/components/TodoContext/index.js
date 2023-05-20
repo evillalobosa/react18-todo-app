@@ -86,6 +86,7 @@ function TodoProvider(props) {
         searchValue,
         setSearchValue,
         searchedTodos,
+        filterTag,
         setFilterTag,
         addTodo,
         completeTodo,
