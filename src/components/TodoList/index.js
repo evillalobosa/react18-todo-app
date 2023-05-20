@@ -23,9 +23,9 @@ function TodoList() {
 
   return (
     <section>
-      {error && <TodoError error={error} />}
+      {error && <TodoError />}
       {loading && <TodoLoading />}
-      {!loading && !searchedTodos.length && <TodoEmpty />}
+      {!error && !loading && !searchedTodos.length && <TodoEmpty />}
 
       <ul>
         {/* MUESTRA LOS NO COMPLETADOS */}

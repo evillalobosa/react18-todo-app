@@ -1,10 +1,10 @@
-function TodoError({ error }) {
-  // {error && <p className="error">Error!</p>}
+import "./index.css";
 
+function TodoError() {
   return (
-    <div>
-      <h2>Error!</h2>
-      <p>{error}</p>
+    <div className="error">
+      <h2>Hubo un error!</h2>
+      <p>Prueba limpiando el localStorage</p>
     </div>
   );
 }
