@@ -1,16 +1,16 @@
 li {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 0 15px 0;
-    padding: 0px 15px 10px;
-    background-color: var(--color-bg);
-    border-radius: 4px;
-    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 15px 0;
+  padding: 0px 15px 10px;
+  background-color: var(--color-bg);
+  border-radius: 4px;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 }
 li.task-priority-p1 {
-    border: 2px solid var(--color-priority1);
+  border: 2px solid var(--color-priority1);
 }
 
 li.task-priority-p2 {
@@ -26,36 +26,49 @@ li.task-priority-p4 {
 }
 
 button {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
-    height: 1.5em;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  height: 1.5em;
 }
 
 .task-icon {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .task-details {
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-    font-size: 16px;
-    width: 90%;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 16px;
+  width: 90%;
 }
 
 .task-properties {
-    display: flex;
-    justify-content: space-between;
-    font-weight: lighter;
-    font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: lighter;
+  font-size: 12px;
+}
+
+.task-tag {
+  font-style: italic;
 }
 
 .task-completed {
-    opacity: 0.3;
-    text-decoration: line-through
+  border: 2px solid var(--color-fg);
+}
+
+.task-completed-details {
+  opacity: 0.4;
+}
+
+.task-icon-delete:hover {
+  border-radius: 8px;
+  background-color: rgba(100, 100, 111, 0.1);
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 }

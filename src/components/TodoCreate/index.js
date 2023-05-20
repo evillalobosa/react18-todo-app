@@ -31,7 +31,7 @@ function TodoCreate() {
     const matchPriority = userInput.match(prioritiesRegex);
 
     if (matchPriority) {
-      console.log("Aplicando prioridad: ", matchPriority[0]);
+      // console.log("Aplicando prioridad: ", matchPriority[0]);
       setPriority(matchPriority[0].trim());
     }
 
@@ -42,7 +42,7 @@ function TodoCreate() {
     const matchTag = userInput.match(tagsRegex);
 
     if (matchTag) {
-      console.log("Aplicando tag: ", matchTag[0]);
+      // console.log("Aplicando tag: ", matchTag[0]);
       setTag(matchTag[0].trim());
     }
   };
@@ -60,6 +60,7 @@ function TodoCreate() {
           placeholder="Create new tasks here!"
           value={searchValue}
           onChange={onTyping}
+          className={`input-priority-${priority}`}
         />
       </form>
     </div>

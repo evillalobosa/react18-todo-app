@@ -53,6 +53,7 @@ function TodoList() {
               title={todo.title}
               created={todo.created}
               completed={todo.completed}
+              tag={todo.tag}
               onComplete={() => completeTodo(todo.title)}
               onDelete={() => deleteTodo(todo.title)}
             />

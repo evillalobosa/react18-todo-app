@@ -1,42 +1,55 @@
 input {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    padding: 20px;
-    font-size: 14px;
-    background-color: var(--color-accent);
-    color: var(--color-bg);
-    border: 2px solid var(--color-accent);
-    border-radius: 4px;
-    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  padding: 20px;
+  font-size: 14px;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  border: 2px solid var(--color-accent);
+  border-radius: 4px;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 }
 
-input[type=text]:focus {
-    border: 2px solid var(--color-fg);
-    outline: none;
+input[type="text"]:focus {
+  border: 2px solid var(--color-fg);
+  outline: none;
+}
+
+input.input-priority-p1 {
+  background-color: var(--color-priority1);
+}
+
+input.input-priority-p2 {
+  background-color: var(--color-priority2);
+}
+
+input.input-priority-p3 {
+  background-color: var(--color-priority3);
+}
+
+input.input-priority-p4 {
+  background-color: var(--color-priority4);
 }
 
 .taskInput {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.inputProps {
-    display: flex;
-}
+/* .inputProps {
+  display: flex;
+} */
 
-.priority, .tag {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    font-size: 12px;
-    background-color: var(--color-accent);
-    padding: 5px 10px;
-    margin: 5px;
-    border-radius: 4px;
-    color: var(--color-bg);
-}
-
-/* .priority { } */
-
-/* .tag{ } */
+/* .priority,
+.tag {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: var(--color-accent);
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 4px;
+  color: var(--color-bg);
+} */

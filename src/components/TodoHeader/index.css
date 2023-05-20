@@ -1,24 +1,25 @@
 h1 {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 35px;
-    font-weight: bolder;
-    text-align: center;
-    margin: 15px 0px 0px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 35px;
+  font-weight: bolder;
+  text-align: center;
+  margin: 15px 0px 0px;
 }
 
 .TodoCounter {
-    font-size: 14px;
-    font-weight: bolder;
-    text-align: center;
-    margin: 10px 0px 20px;
-    border-radius: 8px;
-    color: var(--color-fg);
+  font-size: 14px;
+  font-weight: bolder;
+  text-align: center;
+  margin: 10px 0px 20px;
+  border-radius: 8px;
+  color: var(--color-fg);
 }
 
-/* TODO: Refactor */
 .header {
-    background-color: var(--color-bg);
-    padding: 10px 50px;
-    margin: 20px 0px 20px;
-    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+  width: 250px;
+  height: 100px;
+  padding: 10px 50px;
+  margin: 20px 0px 20px;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+  background-color: var(--color-bg);
 }

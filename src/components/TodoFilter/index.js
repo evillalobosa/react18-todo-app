@@ -3,7 +3,8 @@ import { TodoContext } from "../TodoContext";
 import "./index.css";
 
 function TodoFilter() {
-  const { todos, filterTag, setFilterTag } = React.useContext(TodoContext);
+  const { todos, loading, filterTag, setFilterTag } =
+    React.useContext(TodoContext);
 
   const tags = [...new Set(todos.map((item) => item.tag))];
 
@@ -17,7 +18,7 @@ function TodoFilter() {
 
   return (
     <div className="todo-filter">
-      {tags.length === 0 ? (
+      {!loading && tags.length === 0 ? (
         <div className="todo-tag-none">TIP: Crea un tag añandiendo @tag</div>
       ) : (
         tags.map((tag) => (

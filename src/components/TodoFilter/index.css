@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 277px;
+  width: 350px;
   margin: 10px 0 20px;
 }
 
@@ -22,7 +22,7 @@
 
 .todo-tag-none {
   background-color: var(--color-bg);
-  padding: 10px 5px;
+  padding: 10px 10px;
   font-size: 12px;
   font-weight: 600;
   box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
