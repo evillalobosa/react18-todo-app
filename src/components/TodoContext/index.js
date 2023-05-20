@@ -20,6 +20,7 @@ function TodoProvider(props) {
     error,
   } = useLocalStorage("TODOS_V1", []);
   const [searchValue, setSearchValue] = React.useState("");
+  const [filterTag, setFilterTag] = React.useState("");
 
   const completedTodos = todos.filter((todo) => todo.completed === true).length;
   const totalTodos = todos.length;
@@ -28,6 +29,8 @@ function TodoProvider(props) {
 
   if (!searchedTodos >= 1) {
     searchedTodos = todos;
+  } else if (filterTag !== "") {
+    searchedTodos = todos.filter((todo) => todo.tag === filterTag);
   } else {
     searchedTodos = todos.filter((todo) => {
       const todoTitle = todo.title.toLowerCase();
@@ -75,6 +78,7 @@ function TodoProvider(props) {
   return (
     <TodoContext.Provider
       value={{
+        todos,
         loading,
         error,
         totalTodos,
@@ -82,6 +86,7 @@ function TodoProvider(props) {
         searchValue,
         setSearchValue,
         searchedTodos,
+        setFilterTag,
         addTodo,
         completeTodo,
         deleteTodo,

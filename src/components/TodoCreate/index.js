@@ -9,6 +9,7 @@ function TodoCreate() {
   const [tag, setTag] = React.useState("");
 
   const onSubmit = (event) => {
+    // TODO: prevent empty title
     // Prevent page reload
     event.preventDefault();
     // Add todo to the list
@@ -37,7 +38,7 @@ function TodoCreate() {
     // MATCH TAG
     // Detects if the user input contains the tag of the task
     // The tag is a word no longer than 10 characters
-    const tagsRegex = /(^|\s)@[a-zA-Z]{1,10}(\s|$)/;
+    const tagsRegex = /(^|\s)@[a-zA-Zñ_]{1,10}(\s|$)/;
     const matchTag = userInput.match(tagsRegex);
 
     if (matchTag) {
@@ -49,10 +50,10 @@ function TodoCreate() {
   // TODO: add a button to clear the input 🗑️
   return (
     <div className="taskInput">
-      <div className="inputProps">
+      {/* <div className="inputProps">
         {priority && <div className="priority">{priority}</div>}
         {tag && <div className="tag">{tag}</div>}
-      </div>
+      </div> */}
       <form onSubmit={onSubmit}>
         <input
           type="text"

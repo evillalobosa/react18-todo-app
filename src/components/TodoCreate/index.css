@@ -27,16 +27,16 @@ input[type=text]:focus {
 }
 
 .priority, .tag {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: var(--color-accent);
     padding: 5px 10px;
     margin: 5px;
     border-radius: 4px;
     color: var(--color-bg);
 }
 
-.priority {
-    background-color: var(--color-priority1);
-}
+/* .priority { } */
 
-.tag{ 
-    background-color: var(--color-tag);
-}
+/* .tag{ } */
