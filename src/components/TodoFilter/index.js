@@ -6,7 +6,9 @@ function TodoFilter() {
   const { todos, loading, error, filterTag, setFilterTag } =
     React.useContext(TodoContext);
 
-  const tags = [...new Set(todos.map((item) => item.tag))];
+  const tags = [...new Set(todos.map((item) => item.tag))].filter(
+    (tag) => tag !== ""
+  );
 
   const onClick = (tag) => {
     if (filterTag === tag) {
